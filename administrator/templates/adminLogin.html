@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+</head>
+<body>
+{{error|safe}}
+<form action="" method="POST" name="adminlogin">
+    {% csrf_token %}
+    <label for="user">Username:</label>
+    <input type="user" id="user" name="username" /> <br>
+    <label for="pwd">Password:</label>
+    <input type="password" id="pwd" name="password" /> <br>
+    <br> <br>
+
+    <button type="submit" name="Login">Login</button>
+
+
+</form>
+
+<form action="" method="POST" name="Return">
+    {% csrf_token %}
+    <button type="submit" name="Go Home" action="http://127.0.0.1:8000">Return</button>
+</form>
+
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

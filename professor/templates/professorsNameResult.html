@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Professor Results</title>
+</head>
+
+<body>
+{{data2|safe}}
+
+<!--showing success message-->
+<!--testing-->
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<!--Form with multiple submit buttons-->
+<form action="" method="POST" name="Return">
+    <button type="submit" name="Go Back to Name" action=" ">Return</button>
+</form>
+</body>
+</html>

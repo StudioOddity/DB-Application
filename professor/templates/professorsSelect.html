@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Professor Selection</title>
+</head>
+
+<body>
+
+<!--showing success message-->
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<!--Form with multiple submit buttons-->
+<form action="" method="POST" name="Number">
+    {% csrf_token %}
+    <button type="submit" name="NumStudent">Number of Students</button>
+
+</form>
+
+<form action="" method="POST" name="Names">
+    {% csrf_token %}
+    <button type="submit" name="NameStudent">List of Students</button>
+
+</form>
+
+<form action="" method="POST" name="Return">
+    <button type="submit" name="Go Back to Login" action=" ">Return</button>
+</form>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>

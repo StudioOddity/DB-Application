@@ -1,0 +1,14 @@
+4/6/22
+
+Notes:
+
+* Using built in django login features
+* Using csrf tokens
+* Using template for the different views
+
+To dos:
+
+* Looking into why django is missing a csrf token for secruity 
+* Figuring out how to edit admin login
+* Add other users
+* Once points above are complete, developement for the other features will begin

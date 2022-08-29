@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Order By</title>
+</head>
+
+<body>
+{{namesort}}
+{{error|safe}}
+
+<!--showing success message-->
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<!--Form with multiple submit buttons-->
+<h2>Choose how to sort your table:</h2>
+<form action="" method="POST" name="form">
+    {% csrf_token %}
+    <input type="radio" id="Name" name="sort" value="name">
+    <label for="Name">Name</label>
+    <input type="radio" id="Dept" name="sort" value="dept">
+    <label for="Name">Dept</label>
+    <input type="radio" id="Salary" name="sort" value="salary">
+    <label for="Name">Salary</label>
+    <br>
+    <button type="submit" name="Create Table">Create Table</button>
+
+</form>
+
+<form action="" method="POST" name="Return">
+    <button type="submit" name="Go Back More" action=" ">Return</button>
+</form>
+</body>
+</html>

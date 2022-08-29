@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Selection</title>
+</head>
+
+<body>
+
+<!--showing success message-->
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<!--Form with multiple submit buttons-->
+<form action="" method="POST" name="OrderBy">
+    {% csrf_token %}
+    <button type="submit" name="OrderBy">Create Professor List</button>
+
+</form>
+
+<form action="" method="POST" name="Salaries">
+    {% csrf_token %}
+    <button type="submit" name="Salaries">Create Salaries List</button>
+
+</form>
+
+<form action="" method="POST" name="ProfTeach">
+    {% csrf_token %}
+    <button type="submit" name="ProfTeach">Create Teaching List</button>
+
+</form>
+
+<form action="" method="POST" name="Return">
+    <button type="submit" name="Go Back to Login" action=" ">Return</button>
+</form>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
